@@ -1,0 +1,32 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Devices Power On</title>
+</head>
+<body>
+    <h1>Devices </h1>
+
+    <h2>Laptop</h2>
+    <p>@Model.LaptopMessage</p>
+    <form method="post">
+        <button type="submit" asp-page-handler="PowerOnLaptop">Power On Laptop</button>
+    </form>
+
+    <h2>Smartphone</h2>
+    <p>@Model.SmartphoneMessage</p>
+    <form method="post">
+        <button type="submit" asp-page-handler="PowerOnSmartphone">Power On Smartphone</button>
+    </form>
+</body>
+</html>
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
